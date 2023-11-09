@@ -1,6 +1,4 @@
-import { createTheme, ThemeProvider, colors } from '@mui/material'
-import AdapterDateFns from '@mui/lab/AdapterDateFns'
-import { LocalizationProvider } from '@mui/lab'
+import { createTheme, ThemeProvider, colors } from '@mui/material';
 import './App.css'
 // import { MuiTable } from './components/MuiTable'
 import { MuiCustomTheme } from './components/MuiCustomTheme'
@@ -39,6 +37,7 @@ import { MuiTimeline } from './components/MuiTimeline'
 import { MuiMasonry } from './components/MuiMasonry'
 import { MUITypography } from './components/MUITypography'
 import { MuiTable } from './components/MuiTable'
+import MuiDatePicker from './components/MuiDatePicker';
 
 const theme = createTheme({
   status: {
@@ -58,7 +57,6 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      {/* <LocalizationProvider dateAdapter={AdapterDateFns}> */}
         <div className='App'>
           <MUITypography /> 
           <MuiButton />
@@ -95,8 +93,8 @@ function App() {
           <MuiMasonry />
            <MuiTimeline />
           <MuiCustomTheme />
+          <MuiDatePicker />
         </div>
-      {/* </LocalizationProvider> */}
     </ThemeProvider>
   )
 }
